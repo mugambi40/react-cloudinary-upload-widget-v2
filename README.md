@@ -1,11 +1,11 @@
-# react-cloudinary-upload-widget
+# react-cloudinary-upload-widget-v2
 
-[![NPM](https://img.shields.io/npm/v/react-cloudinary-upload-widget.svg)](https://www.npmjs.com/package/react-cloudinary-upload-widget) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-cloudinary-upload-widget-v2.svg)](https://www.npmjs.com/package/react-cloudinary-upload-widget-v2) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save react-cloudinary-upload-widget
+npm install --save react-cloudinary-upload-widget-v2
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ npm install --save react-cloudinary-upload-widget
 ```jsx
 import React from 'react'
 
-import { WidgetLoader, Widget } from 'react-cloudinary-upload-widget'
+import { WidgetLoader, Widget } from 'react-cloudinary-upload-widget-v2'
 
 const Example = () => {
   return (
