@@ -61,7 +61,7 @@ const myWidget = (
         //Necessary props
         thumbnails,
         croppingAspectRatio,
-        croppingShowDimensions = false,
+        croppingShowDimensions,
         clientAllowedFormats,
         maxFileSize,
         maxImageWidth,
