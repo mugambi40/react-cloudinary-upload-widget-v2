@@ -23,7 +23,10 @@ const Example = () => {
         sources={['local', 'camera', 'dropbox']} // set the sources available for uploading -> by default
         // all sources are available. More information on their use can be found at
         // https://cloudinary.com/documentation/upload_widget#the_sources_parameter
-        sourceKeys={{dropboxAppKey: '1dsf42dl1i2', instagramClientId: 'd7aadf962m'}} // add source keys
+        sourceKeys={{
+          dropboxAppKey: '1dsf42dl1i2',
+          instagramClientId: 'd7aadf962m'
+        }} // add source keys
         // and ID's as an object. More information on their use can be found at
         // https://cloudinary.com/documentation/upload_widget#the_sources_parameter
         resourceType={'image'} // optionally set with 'auto', 'image', 'video' or 'raw' -> default = 'auto'
@@ -32,13 +35,13 @@ const Example = () => {
         uploadPreset={'preset1'} // check that an upload preset exists and check mode is signed or unisgned
         buttonText={'Open'} // default 'Upload Files'
         style={{
-              color: 'white',
-              border: 'none',
-              width: '120px',
-              backgroundColor: 'green',
-              borderRadius: '4px',
-              height: '25px'
-            }} // inline styling only or style id='cloudinary_upload_button'
+          color: 'white',
+          border: 'none',
+          width: '120px',
+          backgroundColor: 'green',
+          borderRadius: '4px',
+          height: '25px'
+        }} // inline styling only or style id='cloudinary_upload_button'
         folder={'my_folder'} // set cloudinary folder name to send file
         cropping={false} // set ability to crop images -> default = true
         // https://support.cloudinary.com/hc/en-us/articles/203062071-How-to-crop-images-via-the-Upload-Widget-#:~:text=Click%20on%20the%20%22Edit%22%20link,OK%22%20and%20Save%20the%20changes.
@@ -56,6 +59,17 @@ const Example = () => {
         use_filename={false} // tell Cloudinary to use the original name of the uploaded
         // file as its public ID -> default = true,
 
+        thumbnails={null} //If you don't want to display thumbnails at all, set to 'false'. Example: .content .uploaded
+        croppingAspectRatio={null} //If specified, enforce the given aspect ratio on the selected region when performing interactive cropping. The aspect ratio is defined as width/height. For example, 0.5 for a portrait oriented rectangle or 1 for square. Relevant only if the cropping feature is enabled. Example: 0.5
+        croppingShowDimensions={false} //Whether to display the cropping dimensions in the top left corner of the cropping region. Whether to display the cropping dimensions in the top left corner of the cropping region. Default: false
+        clientAllowedFormats={null} //Allows client-side validation of the uploaded files based on their file extensions. You can specify one or more file extensions, and/or limit the allowed files to "video" or "image". Only applies when uploading files from a local device. Example: ["webp", "gif", "video"]
+        maxFileSize={null} //Applies to local files only. Example: 5500000 (5.5 MB)
+        maxImageWidth={null} //If specified, client-side scale-down resizing takes place before uploading if the width of the selected file is larger than the specified value. Example: 2000
+        maxImageHeight={null} //If specified, client-side scale-down resizing takes place before uploading if the height of the selected file is larger than the specified value. Example: 2000
+        minImageWidth={null} //If specified, client-side validation takes place before uploading. If the width of the selected file is smaller than the specified value, the upload is cancelled. Example: 200
+        minImageHeight={null} //If specified, client-side validation takes place before uploading. If the height of the selected file is smaller than the specified value, the upload is cancelled. Example: 200
+        maxVideoFileSize={null} //If specified, perform client-side validation to prevent uploading video files larger than the given bytes size. Default: null (no client-side limit). Overrides maxFileSize (if set) for videos
+        maxRawFileSize={null} //If specified, perform client-side validation to prevent uploading raw files larger than the given bytes size. Default: null (no client-side limit)
         widgetStyles={{
           palette: {
             window: '#737373',
@@ -81,11 +95,11 @@ const Example = () => {
           }
         }} // ability to customise the style of the widget uploader
         destroy={true} // will destroy the widget on completion
-
-
         // 👇 FOR SIGNED UPLOADS ONLY 👇
 
-        generateSignatureUrl={'http://my_domain.com/api/v1/media/generate_signature'} // pass the api
+        generateSignatureUrl={
+          'http://my_domain.com/api/v1/media/generate_signature'
+        } // pass the api
         // endpoint for generating a signature -> check cloudinary docs and SDK's for signing uploads
         apiKey={00000000000000} // cloudinary API key -> number format
         accepts={'application/json'} // for signed uploads only -> default = 'application/json'
@@ -93,7 +107,6 @@ const Example = () => {
         withCredentials={true} // default = true -> check axios documentation for more information
         unique_filename={true} // setting it to false, you can tell Cloudinary not to attempt to make
         // the Public ID unique, and just use the normalized file name -> default = true
-
       />
     </>
   )
@@ -118,8 +131,6 @@ This example is from their ruby SDK
 
 ## License
 
-MIT © [bubbaspaarx](https://github.com/bubbaspaarx)
+MIT © [mugambi40](https://github.com/mugambi40)
 
 ---
-
-
